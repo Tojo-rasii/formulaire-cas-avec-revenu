@@ -1,0 +1,175 @@
+<style>
+    .multi-select-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .options-container {
+        display: none;
+        /* Masque les options au départ */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        z-index: 10;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .options-container.show {
+        display: block;
+        /* Affiche les options */
+    }
+
+    .selection-text {
+        cursor: pointer;
+        font-size: 14px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .arrow-down {
+        font-size: 12px;
+        margin-left: 10px;
+        transform: rotate(0deg);
+        transition: transform 0.2s ease;
+    }
+
+    .options-container.show~.selection-text .arrow-down {
+        transform: rotate(180deg);
+        /* Rotation pour indiquer "fermé" */
+    }
+
+    .selected-items span {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 10px;
+        background-color: #f0f0f0;
+        margin-right: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+        position: relative;
+    }
+
+    .selected-items span .remove-btn {
+        margin-left: 5px;
+        font-size: 12px;
+        color: red;
+        cursor: pointer;
+    }
+
+    .selection-text {
+        cursor: pointer;
+        font-size: 14px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+</style>
+<div class="multi-select-wrapper">
+    <label class="multi-select-label">
+        <figure>
+            <div class="selection-text" id="toggle-popup">
+                <p id="no-items-selected">Aucun élément sélectionné</p>
+                <span id="arrow-icon" class="arrow-down">▼</span>
+            </div>
+            <div class="selected-items">
+                <figcaption id="display-selected">
+                    <!-- Les éléments sélectionnés avec le "X" apparaîtront ici -->
+                </figcaption>
+            </div>
+        </figure>
+    </label>
+    <figure class="options-container" id="options-popup">
+        <div class="options-popup">
+            <label class="option-item">
+                <input type="checkbox" value="Bulletin de paie" class="checkbox-option"> Bulletin de paie
+            </label>
+            <label class="option-item">
+                <input type="checkbox" value="Garant" class="checkbox-option"> Garant
+            </label>
+            <label class="option-item">
+                <input type="checkbox" value="Plusieurs mois d’avance" class="checkbox-option"> Plusieurs mois d’avance
+            </label>
+            <label class="option-item">
+                <input type="checkbox" value="Déclaration d’impôt" class="checkbox-option"> Déclaration d’impôt
+            </label>
+            <label class="option-item">
+                <input type="checkbox" value="Recommandation du dernier bailleur" class="checkbox-option">
+                Recommandation du dernier bailleur
+            </label>
+        </div>
+    </figure>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const checkboxes = document.querySelectorAll(".checkbox-option");
+        const displaySelected = document.getElementById("display-selected");
+        const noItemsSelected = document.getElementById("no-items-selected");
+        const togglePopup = document.getElementById("toggle-popup");
+        const optionsPopup = document.getElementById("options-popup");
+        const arrowIcon = document.getElementById("arrow-icon");
+
+        // Fonction pour afficher/masquer les options
+        togglePopup.addEventListener("click", () => {
+            optionsPopup.classList.toggle("show");
+
+            // Mise à jour de l'icône flèche
+            const isOpen = optionsPopup.classList.contains("show");
+            arrowIcon.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
+        });
+
+        // Fonction pour mettre à jour la liste des éléments sélectionnés
+        const updateSelection = () => {
+            const selectedValues = Array.from(checkboxes)
+                .filter(input => input.checked)
+                .map(input => input.value);
+
+            displaySelected.innerHTML = "";
+
+            if (selectedValues.length > 0) {
+                noItemsSelected.style.display = "none";
+                selectedValues.forEach(value => {
+                    const span = document.createElement("span");
+                    span.textContent = value;
+
+                    const removeBtn = document.createElement("span");
+                    removeBtn.textContent = "X";
+                    removeBtn.classList.add("remove-btn");
+                    removeBtn.addEventListener("click", () => {
+                        // Décocher la case correspondante
+                        const checkbox = Array.from(checkboxes).find(input => input.value === value);
+                        if (checkbox) checkbox.checked = false;
+                        updateSelection();
+                    });
+
+                    span.appendChild(removeBtn);
+                    displaySelected.appendChild(span);
+                });
+            } else {
+                noItemsSelected.style.display = "block";
+            }
+        };
+
+        // Écouteur pour les changements sur les cases à cocher
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", updateSelection);
+        });
+
+        // Initialisation
+        updateSelection();
+    });
+
+
+
+</script>

@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary: #2892F5;
+    --secondary: #F2F4F7;
+}
+
+.btn-blue {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.8em 1.8em;
+    font-family: 'poppins';
+    border-radius: 0.3em;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-selection {
+    background-color: #4578b4;
+    border-radius: 0 0.3em 0.3em 0;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+
+.input-selection {
+    border-radius: 0.3em 0 0 0.3em !important;
+    /* background: red !important; */
+}
+
+button {
+    padding: 0.8em 1.8em;
+    font-family: 'poppins';
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1em;
+    text-wrap: nowrap;
+}
+
+textarea {
+    resize: none;
+}
+
+.italic {
+    font-style: italic !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+html {
+    font-size: 0.9em;
+    font-family: 'poppins';
+}
+
+input {
+    font-family: 'poppins';
+    font-size: 1em;
+    color: #6b6b6b;
+}
+
+input:read-only {
+    cursor: pointer;
+}
+
+body {
+    background: var(--secondary);
+}
+
+#main {
+    background: #fff;
+    /* height: 100vh; */
+}

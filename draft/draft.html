@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search with Popup</title>
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #search-container {
+            position: relative;
+            width: 300px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #popup {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 10;
+        }
+
+        .popup-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .popup-item:hover {
+            background: #f0f0f0;
+        }
+
+        .popup-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            margin-left: 10px;
+        }
+
+        #selected-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        #selected-item img {
+            margin-right: 8px;
+        }
+
+        .popup-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .popup-item img {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="search-container">
+        <div id="selected-item">
+            <span id="selected-text">Search...</span>
+        </div>
+        <label>
+            <img id="selected-icon" src="default-icon.png" alt="Selected Icon" width="20" height="20">
+            <input type="text" id="search-input" placeholder="Search...">
+            <i>
+                <svg width="6" height="3" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M5.59628 0H0.403717C0.0444951 0 -0.135116 0.382449 0.119165 0.606582L2.71444 2.89594C2.87185 3.03469 3.12815 3.03469 3.28556 2.89594L5.88084 0.606582C6.13512 0.382449 5.9555 0 5.59628 0Z"
+                        fill="#585856" />
+                </svg>
+
+            </i>
+        </label>
+        <div id="popup">
+            <div class="popup-item" data-img="image.png">
+                <span>Option 1</span>
+                <img src="image.png" alt="Icon 1" width="20" height="20">
+            </div>
+            <div class="popup-item" data-img="down.png">
+                <span>Option 2</span>
+                <img src="down.png" alt="Icon 2" width="20" height="20">
+            </div>
+            <div class="popup-item" data-img="list.png">
+                <span>Option 3</span>
+                <img src="list.png" alt="Icon 3" width="20" height="20">
+            </div>
+            <div class="popup-item" data-img="check.png">
+                <span>Option 3</span>
+                <img src="check.png" alt="Icon 3" width="20" height="20">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('search-input');
+        const popup = document.getElementById('popup');
+        const items = document.querySelectorAll('.popup-item');
+        const selectedIcon = document.getElementById('selected-icon');
+        const selectedText = document.getElementById('selected-text');
+
+        // Afficher la popup lorsqu'on clique sur l'input
+        input.addEventListener('focus', () => {
+            popup.style.display = 'block';
+        });
+
+        // Cacher la popup lorsqu'on clique en dehors
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('search-container').contains(e.target)) {
+                popup.style.display = 'none';
+            }
+        });
+
+        // Mettre à jour l'image et le texte sélectionnés
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.getAttribute('data-img');
+                const text = item.querySelector('span').textContent;
+
+                // Mettre à jour l'image et le texte
+                selectedIcon.src = imgSrc;
+                selectedText.textContent = text;
+
+                // Mettre à jour la valeur de l'input
+                input.value = text;
+
+                popup.style.display = 'none';
+            });
+        });
+
+    </script>
+</body>
+
+</html>

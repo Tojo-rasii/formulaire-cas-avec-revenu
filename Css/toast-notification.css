@@ -1,0 +1,25 @@
+#toast-notification {
+    position: fixed;
+    bottom: 0;
+    background: #03A84E;
+    padding: 1.5em;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 2em;
+    display: none;
+    border-radius: 0.5em;
+}
+
+.article-toast {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    color: #fff;
+}
+
+.article-toast picture p {
+    font-size: 1.1em;
+    font-weight: 300;
+    width: 90%;
+}

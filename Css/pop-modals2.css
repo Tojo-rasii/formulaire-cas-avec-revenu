@@ -1,0 +1,251 @@
+#modale-apercu-secondary {
+    /* background: #0000005d; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    left: 0;
+    display: block;
+}
+
+#modale-apercu-secondary section {
+    width: 70%;
+    height: max-content;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.vide {
+    /* background: red; */
+    min-width: 15em !important;
+}
+
+.row-width {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1.5em;
+}
+
+.row-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3em !important;
+    line-height: 0.9em !important;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.head-apercu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* background: red; */
+    padding: 2em 0;
+}
+
+.modal-hr1 {
+    /* background: red; */
+}
+
+.modal-hr2 {
+    /* background: red; */
+}
+
+.modal-hr1 hr {
+    margin-top: 1em;
+    border: 1px solid #03A84E;
+}
+
+.modal-hr1 hr {
+    margin-top: 1em;
+}
+
+.modal-hr2 hr {
+    margin-top: 1em;
+}
+
+.modal-hr2 hr {
+    margin-top: 1em;
+}
+
+.title-doc {
+    font-weight: 700;
+}
+
+.row-doc {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.table-doc {
+    /* background: rgba(0, 0, 0, 0.308); */
+    /* border: 1px solid black; */
+    width: 100%;
+    /* border-collapse: collapse; */
+    margin-top: 0 !important;
+    /* background: green; */
+}
+
+.tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    outline: 0.5px solid #585856;
+
+    /* background: green; */
+}
+
+
+
+.row-th-p p {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    height: 100%;
+    font-weight: 600;
+    align-items: center;
+}
+
+.th {
+    border: 0.5px solid #585856;
+
+    padding: 0.8em;
+    text-wrap: nowrap;
+    flex: 1 15em;
+    align-items: center;
+    /* background: green; */
+}
+
+.th-check {
+    /* background: red; */
+    flex: 0 5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.th-check input {
+    width: 1.5em;
+    height: 1.5em;
+    accent-color: green;
+}
+
+.table-doc thead tr th {
+    border: 1px solid #ccc;
+    text-wrap: nowrap;
+    /* background: green; */
+}
+
+.thead {
+    display: flex;
+    flex-direction: column;
+    gap: 0 !important;
+}
+
+
+.table-parent {
+    /* background: green !important; */
+    overflow: auto;
+    /* display: none !important; */
+    width: 100% !important;
+
+}
+
+.table-parent figure {
+    /* background: red; */
+    width: 100%;
+}
+
+.table-doc tr th {
+    /* background: yellow; */
+    /* border-right: 1px solid black; */
+    padding: 1em;
+    font-weight: 550;
+
+}
+
+.table-doc tr th:nth-child(3) {
+    /* background: red; */
+    width: 40%;
+}
+
+.table-doc tr th:last-child {
+    /* background: red; */
+}
+
+.table-doc tr th:nth-child(2) {
+    /* background: green; */
+    text-align: left;
+}
+
+.table-doc tr th input[type='checkbox'] {
+    width: 1.2em;
+    height: 1.2em;
+    accent-color: var(--primary);
+}
+
+.table-doc tr th:last-child {
+    /* background: yellow; */
+    /* border-right: none; */
+
+}
+
+.red {
+    color: rgb(206, 22, 22);
+}
+
+.th-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+}
+
+.th-row i {
+    cursor: pointer;
+}
+
+.th-row i:hover {
+    scale: 1.05;
+}
+
+.pop-btn2 {
+    /* background: red; */
+    padding: 2em 0;
+    width: 100%;
+}
+
+.pop-btn2 div {
+    /* background: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-end {
+    /* background: red; */
+    width: 50% !important;
+    justify-content: end;
+
+}

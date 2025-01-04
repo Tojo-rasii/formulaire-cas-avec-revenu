@@ -1,0 +1,488 @@
+.section-main {
+    /* background: red; */
+    height: 100%;
+    padding: 1em;
+}
+
+/* .section-article-picture {
+    background: green;
+} */
+
+/* .section-article-picture picture {
+    background: green;
+} */
+
+.section-article-picture picture h1 {
+    background: var(--primary);
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+
+
+.section-article-range {
+    /* background: green; */
+    position: relative;
+    border-bottom: 1px solid silver;
+}
+
+.section-article-range picture {
+    /* background: green; */
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+    width: 100%;
+    padding: 2.5em;
+}
+
+.section-article-range picture {
+    /* background: green; */
+}
+
+.section-article-range picture label {
+    /* background: blue; */
+    flex: 1;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hr {
+    /* position: absolute; */
+    /* bottom: 53%; */
+    /* background: red; */
+    width: 43%;
+    /* padding: 1em; */
+}
+
+.section-article-range picture label.active h4 {
+    font-weight: 600;
+    color: #000;
+    font-size: 1.1em;
+}
+
+.section-article-range picture label h4 {
+    color: silver;
+}
+
+.section-article-range picture label.active p {
+    background: #03A84E;
+    color: white;
+}
+
+.section-article-range picture label p {
+    font-size: 1.2em;
+    width: 2em;
+    margin: 0 auto;
+    height: 2em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    color: #fff;
+    background: silver;
+    margin-bottom: 1em;
+}
+
+.article-title {
+    /* background: red; */
+    padding: 3em 0;
+}
+
+.apercu-form {
+    /* background: blue; */
+    margin-top: 3.5em;
+}
+
+.apercu-form form label :is(input[type='text'], input[type='number']) {
+    width: 100%;
+    /* height: 3.2em !important; */
+    padding: 1em;
+    background: #f5f5f5;
+    border-radius: 0.3em;
+    outline: 1px solid silver;
+    border: none;
+}
+
+.apercu-hr {
+    /* background: red; */
+    /* padding: 1em; */
+}
+
+.apercu-hr hr {
+    margin: 0 auto;
+    outline: 1px solid var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 1em;
+    width: 40%;
+}
+
+.article-title picture {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.align-center {
+    display: flex;
+    flex-direction: row;
+    /* background: red; */
+    align-items: center;
+}
+
+.span-svg {
+    /* background: red; */
+    padding-bottom: 0;
+    position: relative;
+}
+
+.span-svg #sub {
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: -2%;
+    text-wrap: nowrap;
+    margin-left: 4em;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+
+    background: silver;
+    width: max-content;
+}
+
+/* Style pour le tooltip */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 30px;
+    /* Ajuster selon la taille du SVG */
+    background-color: #f5f5f5;
+    color: #333;
+    white-space: nowrap;
+    z-index: 100;
+    padding: 10px;
+    border-radius: 0;
+    /* Facultatif, pour arrondir les coins du tooltip */
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    top: 23%;
+    /* Placer la flèche juste au-dessus du tooltip */
+    left: 0;
+    /* Centrer la flèche par rapport au tooltip */
+    transform: translateX(-50%);
+    /* Centrer précisément */
+    border-width: 8px;
+    /* Taille de la flèche */
+    border-style: solid;
+    margin-left: -0.40em;
+    border-color: transparent #bebebe transparent transparent;
+    /* Flèche de couleur */
+}
+
+
+/* Afficher le tooltip au survol */
+.span-svg:hover .tooltip {
+    display: block;
+}
+
+#svg-about:hover {
+    scale: 1.05;
+}
+
+.picture-title-apercu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    margin: 3em 0;
+}
+
+.picture-title-apercu p:nth-child(1) {
+    font-weight: 600;
+    font-size: 1.3em;
+
+}
+
+.picture-table {
+    /* width: 100%; */
+    /* background: green !important; */
+    /* padding: 1em; */
+    /* height: 2em;
+    max-height: 2em !important; */
+}
+
+.picture-table figure {
+    width: 100%;
+    background: green !important;
+    /* padding: 1em; */
+    /* overflow-x: auto; */
+    /* height: 2em;
+    max-height: 2em !important; */
+    overflow-x: visible;
+}
+
+.absolute {
+    background: red !important;
+    /* position: absolute; */
+    left: 50%;
+}
+
+.table {
+    /* background: red; */
+    width: 100%;
+    /* background: red !important; */
+    /* gap: 3em; */
+    /* border-spacing: 1em; */
+    /* Espace entre les lignes */
+    border-collapse: separate;
+    position: relative;
+}
+
+.table .tr {
+    outline: 1px solid #58585680;
+    font-weight: 500;
+    text-align: left;
+    /* display: none; */
+    background: red;
+}
+
+
+
+.table tr:nth-last-child(2) {
+    outline: none !important;
+}
+
+.table th {
+    /* background: blue; */
+    font-weight: normal;
+    padding: 1em;
+    border-right: 1px solid #58585680;
+    text-wrap: wrap !important;
+
+}
+
+.table tbody {
+    /* background: blue; */
+    height: max-content;
+    /* outline: 1px dashed #000; */
+    border-spacing: 50em !important;
+}
+
+.td-title p {
+    background: #f0f0f0;
+    padding: 1em;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    width: 100%;
+    color: #585856;
+}
+
+
+.tr-add-primary {
+    height: 15em;
+    border: 2px dashed #58585680;
+    border-top: none;
+}
+
+.pic-check {
+    margin: 0 auto;
+
+}
+
+.td-check {
+    width: 1.5em;
+    height: 1.5em;
+    accent-color: rgb(5, 156, 5);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.row-td {
+    /* margin: auto !important; */
+}
+
+.row-td picture {
+    /* margin: auto !important; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.row-td picture i:hover {
+    scale: 1.03;
+    cursor: pointer;
+}
+
+.table thead tr:first-child {
+    /* background: red; */
+    outline: 1px solid black;
+    border-radius: 0;
+}
+
+.table tbody tr {
+    /* background: red; */
+    outline: 1px solid #5858564D;
+    border-radius: 0.5em;
+    /* background: green; */
+    height: 0;
+
+}
+
+.table tbody tr:last-child {
+    /* background: red; */
+    outline: none;
+    border-radius: 0.5em;
+}
+
+.table td {
+    background: blue;
+    padding: 1em;
+}
+/* .table td::before {
+    content: attr(data-label);
+    /* position: absolute; */
+    left: 0;
+    width: 45%;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left;
+  } */
+
+#add-champ {
+    /* width: 90%; */
+    /* background: red; */
+    /* display: flex;
+    justify-self: center;
+    justify-content: center; */
+}
+
+.mb-2 {
+    margin-bottom: 1em;
+}
+
+.apercu-btn {
+    display: flex;
+    justify-content: end;
+    margin: 2em 0;
+}
+
+.apercu-btn .btn-blue:disabled {
+    background: #94c9f4;
+    cursor: not-allowed;
+}
+
+
+.mt {
+    margin-top: 1em;
+}
+
+.mt-hr {
+    margin-top: 3em;
+}
+
+.label-ajoute {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    gap: 0 !important;
+}
+
+
+
+.label-ajoute button {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.btn-picture {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2em 0;
+}
+
+.btn-picture div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.bg-green {
+    background: #03A84E;
+}
+
+.inpt-style-label figure {
+    background: #f5f5f5 !important;
+    min-width: 100%;
+    /* height: 3.2em !important; */
+    padding: 1em;
+    background: #f5f5f5;
+    border-radius: 0.3em;
+    outline: 1px solid silver;
+    border: none;
+}
+
+.inpt-style-label figure p {
+    font-style: italic;
+}
+
+.selected {
+    display: block;
+}
+
+.selected figcaption {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.popup label {
+    font-weight: 700;
+}
+
+.span-select {
+    background: #CCCCCC;
+    font-size: 0.9em;
+    border-radius: 0.2em;
+    border-radius: 0.6em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8em;
+    width: max-content;
+    font-style: italic;
+}
+
+.fa-x {
+    margin-left: 0.8em;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+}
+
+/* .last-tr {
+    background: red;
+} */
