@@ -257,6 +257,7 @@
     /* background: red; */
     width: 50% !important;
     justify-content: end;
+    gap: 1em;
 
 }
 
