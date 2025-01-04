@@ -12,7 +12,11 @@
         /* overflow-x: auto; */
     }
 
+    #modale-apercu section {
+        width: 95%;
+        margin: 0 auto;
 
+    }
 
 }
 
@@ -24,5 +28,13 @@
         width: 96em !important;
     }
 
+    #modale-apercu-secondary section {
+        margin: auto;
+        width: 85em !important;
+        margin: 0 auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        /* background: red; */
+    }
 
 }

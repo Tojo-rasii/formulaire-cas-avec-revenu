@@ -145,9 +145,9 @@
     }
 
     #modale-apercu-secondary section {
-        width: 95%;
+        width: 100%;
         height: max-content;
-        margin: 0.5em auto;
+        margin: 0 auto;
         background: #fff;
     }
 
