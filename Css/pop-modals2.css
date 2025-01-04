@@ -122,6 +122,16 @@
     align-items: center;
 }
 
+.p-file-select {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    height: 100%;
+    font-weight: 500;
+    align-items: center;
+    color: #585856;
+}
+
 .th {
     border: 0.5px solid #585856;
 
@@ -248,4 +258,18 @@
     width: 50% !important;
     justify-content: end;
 
+}
+
+
+.i-disabled {
+    opacity: 0.6;
+}
+
+.i-disabled:hover {
+    scale: 1 !important;
+    cursor: default;
+}
+
+.p-file-select {
+    visibility: hidden;
 }
