@@ -12,8 +12,8 @@
         /* overflow-x: auto; */
     }
 
-    #modale-apercu section {
-        width: 95%;
+    #modale-apercu-secondary section {
+        width: 97% !important;
         margin: 0 auto;
 
     }

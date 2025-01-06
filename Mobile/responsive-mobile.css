@@ -40,155 +40,16 @@
         font-size: 0.8em;
     }
 
-
-    .section-article-range picture {
-        /* background: green; */
-
-        padding: 1.5em 0.8em !important;
-    }
-
-    .head-apercu {
-        display: flex;
-        flex-direction: column !important;
-        gap: 1em !important;
-        justify-content: space-between;
-        width: 100%;
-        /* background: red; */
-        padding: 2em 0;
-        overflow: hidden !important;
-    }
-
-    .picture-table figure {
-        overflow-x: auto;
-    }
-
-
-    .table-parent {
-        /* background: green !important; */
-        overflow: auto;
-        /* display: none !important; */
-    }
-
-    #modale-apercu section {
-        width: 95%;
-        height: max-content;
-        margin: 0.5em auto;
-        background: #fff;
-    }
-
-    #toast-notification {
-        position: fixed;
-        bottom: 0;
-        background: #03A84E;
-        padding: 1em;
-        left: 2%;
-        margin: 0;
-        transform: translate(0, 0);
-
-        margin-bottom: 2%;
-        width: 95.5%;
-    }
-
-    .article-form-pop form picture {
-        /* background: red; */
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 2em !important;
-        justify-content: left;
-    }
-
-
-    .article-form-pop form label {
-        /* flex: 1 1 calc(33.33% - 1em); */
-        /* background: silver; */
-        width: 100% !important;
-        /* width: 32.2%; */
-        position: relative;
-    }
-
-    #i-notif {
-        width: 5em;
-        height: 5em;
-    }
-
-    .pic-modal {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        /* background: red; */
-        gap: 1em;
-        width: 95% !important;
-    }
-
-    .article-title picture {
-        display: flex;
-        flex-direction: column !important;
-        align-items: center;
-        gap: 1em;
-        text-align: center;
-        font-size: 1.1em;
-        font-weight: 500;
-    }
-
-
-    .article-toast picture svg {
-        /* background: red; */
-        width: 2.5em;
-        height: 2.5em;
-    }
-
-    .article-toast picture p {
-        font-size: 1.1em;
-        font-weight: 300;
-        width: 100%;
-    }
-
     #modale-apercu-secondary section {
         width: 100%;
         height: max-content;
         margin: 0 auto;
         background: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
     }
 
-    #modale-apercu-notification section {
-        width: 90% !important;
-        height: max-content;
-        margin: 0 auto;
-        background: #fff;
-    }
-
-    #modale-apercu section label {
-        /* flex: 1 1 calc(50% - 1em); */
-        flex: 1 1 100%;
-    }
-
-    #next {
-        width: 100%;
-        text-align: center;
-    }
-
-    #add-champ {
-        text-wrap: nowrap;
-        width: 100% !important;
-    }
-
-    .tooltip {
-        display: none;
-        top: 30px;
-        width: 50% !important;
-        /* Ajuster selon la taille du SVG */
-        background-color: #f5f5f5;
-        color: #333;
-        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
-        white-space: wrap !important;
-        z-index: 100;
-        font-size: 0.9em;
-    }
-
-    .align-center {
-        position: relative;
-    }
 
     .pop-btn2 div {
         /* background: red; */
@@ -197,16 +58,18 @@
         gap: 1em;
         justify-content: space-between;
         padding: 0 0;
+        margin: 0 !important;
         /* width: max-content; */
+    }
+
+    #back {
+        margin-top: 4em;
     }
 
     .pop-btn2 div button {
         width: 100%;
     }
 
-    .span-svg {
-        position: initial;
-    }
 
 
     .btn-end {
@@ -215,4 +78,27 @@
         justify-content: end;
 
     }
+
+    .tr {
+        display: flex;
+        flex-direction: column !important;
+        margin-bottom: 2em;
+    }
+
+    .th {
+        flex: 5em;
+    }
+
+
+
+    .row-th-p p {
+
+        justify-content: center !important;
+    }
+
+    .p-file-select {
+        min-width: 100% !important;
+        justify-content: center !important;
+    }
+
 }
